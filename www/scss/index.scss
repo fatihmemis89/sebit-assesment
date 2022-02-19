@@ -1,0 +1,53 @@
+$primary : #0B1D44;
+
+$enable-negative-margins: true;
+$enable-rounded:          false;
+$enable-gradients:        false;
+$display-font-weight:     400;
+
+$input-btn-focus-width:  0;
+$input-btn-focus-box-shadow: 0;
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+//$font-family-sans-serif : "Noto Sans, " + $font-family-sans-serif;
+
+$titra-colors: (
+  "white":  $white,
+  "indigo": $indigo,
+  "teal":   $teal,
+  "blue":   $blue
+);
+
+$theme-colors:map-merge($theme-colors,$titra-colors);
+$utilities-bg-colors: map-merge($utilities-bg-colors,$titra-colors);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+$fa-font-path: '../assets/webfonts/'; 
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular";
+
+body {
+  padding-top:72px;
+}
+
+p{
+  margin-bottom: 0px !important;
+}
+
+.convs {
+  li:nth-child(even) {
+    span:first-child {
+      color : $success;
+    }
+  }
+  li:nth-child(odd) {
+    span:first-child {
+      color : $warning;
+    }
+  }
+}

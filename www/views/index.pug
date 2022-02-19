@@ -1,0 +1,68 @@
+extends _layout
+
+block content
+
+  div#postModal.modal(data-bs-backdrop="static")
+    div.modal-dialog.modal-lg.modal-dialog-centered
+      div.modal-content
+        div.modal-header.bg-light
+          button.btn-close(data-bs-dismiss="modal")
+        div.modal-body
+          
+
+  div.container.py-3
+    div.mb-5.pb-2.border-bottom.d-flex.flex-column.align-items-center
+      h1#blog-title
+      span#blog-desc.mb-3.text-center
+      span#blog-post-count
+
+    div#post-temp-regular.d-none.justify-content-between.align-items-start      
+      h4.badge.bg-primary.date.p-2.me-3
+      div.mb-3.card.w-100
+        div.card-body
+          h1.regular-title
+          span.regular-body
+          div.d-flex.justify-content-end.align-items-center.mt-3
+            button.btn.btn-sm.btn-secondary.me-1.open-modal Modal
+            a.btn.btn-sm.btn-secondary.open-window Window
+    div#post-temp-quote.d-none.justify-content-between.align-items-start      
+      h4.badge.bg-primary.date.p-2.me-3
+      div.mb-3.card.w-100
+        div.card-body
+          figure
+            blockquote.blockquote
+              h2.quote-text
+            figcaption.blockquote-footer.quote-source
+          div.d-flex.justify-content-end.align-items-center.mt-3
+            button.btn.btn-sm.btn-secondary.me-1.open-modal Modal
+            a.btn.btn-sm.btn-secondary.open-window Window
+    div#post-temp-photo.d-none.justify-content-between.align-items-start      
+      h4.badge.bg-primary.date.p-2.me-3
+      div.mb-3.card.w-100
+        div.card-body
+          img.photo-url.img-fluid
+          span.photo-caption
+          div.d-flex.justify-content-end.align-items-center.mt-3
+            button.btn.btn-sm.btn-secondary.me-1.open-modal Modal
+            a.btn.btn-sm.btn-secondary.open-window Window
+    div#post-temp-link.d-none.justify-content-between.align-items-start      
+      h4.badge.bg-primary.date.p-2.me-3
+      div.mb-3.card.w-100
+        div.card-body
+          h3
+            a.link
+          span.link-description
+          div.d-flex.justify-content-end.align-items-center.mt-3
+            button.btn.btn-sm.btn-secondary.me-1.open-modal Modal
+            a.btn.btn-sm.btn-secondary.open-window Window
+    div#post-temp-conversation.d-none.justify-content-between.align-items-start      
+      h4.badge.bg-primary.date.p-2.me-3
+      div.mb-3.card.w-100
+        div.card-body
+          ul.convs.list-group.list-group-flush
+          div.d-flex.justify-content-end.align-items-center.mt-3
+            button.btn.btn-sm.btn-secondary.me-1.open-modal Modal
+            a.btn.btn-sm.btn-secondary.open-window Window
+    div#posts
+      
+    
